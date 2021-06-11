@@ -9,7 +9,7 @@ namespace AnimalShelter.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class AnimalsController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
