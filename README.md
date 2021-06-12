@@ -6,7 +6,7 @@
 
 ## Description
 
-This week's independent project objective was to create a MVC application that implements authentication with Identity and many-to-many relationships.
+This week's independent project objective was to build an API implementing full CRUD functionality, one further exploration objective and complete documentation of API endpoints and the further exploration route of choice. I decided to create and API for a local animal shelter that would list all available cats and dogs, supplemented with Swagger documentation.
 
 ## Setup and Use
 
@@ -17,14 +17,15 @@ This week's independent project objective was to create a MVC application that i
 - A command line interface like Terminal or GitBash to set up and run the project
 - MySQL 8.0.19, following [these pinned installation instructions](https://web.archive.org/web/20210521163651/https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql)
 - A web browser to view and interact with the project
+- Postman 
 
 ### Installation
 
-1. Clone the repository: `$ git clone https://github.com/marneymallory/SweetTreat.Solution.git`
-2. Navigate to the `SweetTreat.Solution` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/marneymallory/AnimalShelter.Solution.git`
+2. Navigate to the `AnimalShelter.Solution` directory on your computer
 3. Open with your preferred text editor to view the code base
 4. To setup a SQL database using MySQL:
-   - Create an `appsettings.json` file in the `SweetTreat` directory
+   - Create an `appsettings.json` file in the `AnimalShelter` directory
    - Copy the text box below and paste into the `appsettings.json` file, replacing `<password>` with your MySQL password:
    ```
      {
@@ -36,9 +37,9 @@ This week's independent project objective was to create a MVC application that i
    - Open your terminal and run the command: `mysql -uroot -p<mysql_password>` (replace `<mysql_password>` with your MySQL password) to launch MySQL server
 5. To serve the local web app:
 
-- Navigate to `SweetTreat.Solution/SweetTreat` in your command line
+- Navigate to `AnimalShelter.Solution/AnimalShelter` in your command line
 - Run the commands:
-  - `dotnet restore` to restore the dependencies that are listed in `SweetTreat.csproj`
+  - `dotnet restore` to restore the dependencies that are listed in `AnimalShelter.csproj`
   - `dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0`
   - `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2`
   - `dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0`
@@ -51,7 +52,28 @@ This week's independent project objective was to create a MVC application that i
 - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
 
 6. Visit the application via web browser at: `localhost:5000/`
-7. Register your email and password to create an account and access site functionality.
+
+## API Documentation
+
+API endpoints can be accessed with GET, POST, PUT, and DELETE requests in Postman or a browser.
+### Swagger
+
+To explore the AnimalShelter API with  Swagger:
+- Launch using `dotnet run` in the      Terminal. 
+- Once the project is running, input the URL: http://localhost:5000/index.html
+
+### Endpoints
+
+Base URL: http://localhost:5000
+
+#### HTTP Requests
+
+- `/api/animals`: GET request that returns all instances of Animals.
+- `
+ 
+
+
+
 
 ## Known Bugs
 
