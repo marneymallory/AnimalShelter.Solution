@@ -1,14 +1,14 @@
-# Animal Shelter
-
+# 🐾 Animal Shelter 🐾
+🐈 🐕 🐈‍⬛ 🐩 🐈 🐕 🐈‍⬛ 🐩 🐈 🐕 🐈‍⬛ 🐩🐈 🐕 🐈‍⬛ 🐩 🐈 🐕 🐈‍⬛ 🐩 🐈 🐕 🐈‍⬛ 
 #### _C# Week 6 Independent Project, 6/11/2021_
 
 #### By _**Marney Mallory**_
 
-## Description
+## ✨Description
 
 This week's independent project objective was to build an API implementing full CRUD functionality, one further exploration objective and complete documentation of API endpoints and the further exploration route of choice. I decided to create and API for a local animal shelter that would list all available cats and dogs, supplemented with Swagger documentation.
 
-## Setup and Use
+## ✨Setup and Use
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ This week's independent project objective was to build an API implementing full 
 - A web browser to view and interact with the project
 - Postman 
 
-### Installation
+## ✨Installation
 
 1. Clone the repository: `$ git clone https://github.com/marneymallory/AnimalShelter.Solution.git`
 2. Navigate to the `AnimalShelter.Solution` directory on your computer
@@ -34,7 +34,6 @@ This week's independent project objective was to build an API implementing full 
          }
      }
    ```
-   - Open your terminal and run the command: `mysql -uroot -p<mysql_password>` (replace `<mysql_password>` with your MySQL password) to launch MySQL server
 5. To serve the local web app:
 
 - Navigate to `AnimalShelter.Solution/AnimalShelter` in your command line
@@ -42,58 +41,53 @@ This week's independent project objective was to build an API implementing full 
   - `dotnet restore` to restore the dependencies that are listed in `AnimalShelter.csproj`
   - `dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0`
   - `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2`
-  - `dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0`
-  - `dotnet build` to build the project and its dependencies into a set of binaries
-  - `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 5.0.0`
-    to add authentication
-  - `dotnet tool install --global dotnet-ef` to install EF Core tools
+  - `dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0`
+  - `dotnet ef Migrations add Initial`
   - `dotnet ef database update`
+  - `dotnet add AnimalShelter.csproj package Swashbuckle.AspNetCore -v 5.6.3` to implement Swagger.
 - Finally, run the command `dotnet run` to run the project!
 - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
 
-6. Visit the application via web browser at: `localhost:5000/`
+6. Visit the application via web browser at: `localhost:5000/index.html`
 
-## API Documentation
+## ✨API Documentation
 
-API endpoints can be accessed with GET, POST, PUT, and DELETE requests in Postman or a browser.
-### Swagger
+API endpoints can be accessed with GET, POST, PUT, and DELETE requests in [Postman](https://www.postman.com/downloads/) or a browser.
 
-To explore the AnimalShelter API with  Swagger:
-- Launch using `dotnet run` in the      Terminal. 
-- Once the project is running, input the URL: http://localhost:5000/index.html
+## ✨Swagger
 
-### Endpoints
+To explore the AnimalShelter API with  [Swagger](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio-code):
+- Launch using `dotnet run` in the Terminal. 
+- Once the project is running, input the URL: http://localhost:5000/index.html to access Swagger documentation. 
+
+## ✨Endpoints/HTTP Requests
 
 Base URL: http://localhost:5000
 
-#### HTTP Requests
-
-- `/api/animals`: GET request that returns all instances of Animals.
-- `
+- GET `/api/animals`: request that returns all instances of Animals.
+- GET `/api/animals/{id}`: request that returns a single instance of Animal by ID.
+- POST `/api/animals` : creates a new Animal with properties Name, Species, Age, Breed, Description and Gender.
+- PUT `/api/animals` : updates existing Animal by updating selected field.
+- DELETE `/api/animals` : deletes existing animal. 
  
-
-
-
-
-## Known Bugs
+## ✨Known Bugs
 
 _No known bugs_ :bug:
 
-## Support and contact details
+## ✨Support and contact details
 
 _Please reach out through my GitHub account._
 
-## Technologies Used
+## ✨Technologies Used
 
 - C#
 - .NET 5 SDK
-- ASP.NET Core MVC with Identity
+- ASP.NET Core 
 - Entity Framework Core
 - MySQL
-- Bootstrap
-- HTML5 with Razor syntax
+- Postman
 
-### License
+## ✨License
 
 <details>
 <summary><a href="https://opensource.org/licenses/MIT"><strong>MIT</strong></a></summary>
